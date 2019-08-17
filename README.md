@@ -17,6 +17,6 @@ Assumptions:
    b) D1, D2, D3, D5 - Not Consecutive
    c) D1, D2, D3, A4 - Not Consecutive
 6) No pattern repeating, suit wise
-   a) D1, D2 - Repeating
+   a) D1, D1 - Repeating
    b) A9, A9 - Repeating
    c) S4, A4 - Not Repeating
