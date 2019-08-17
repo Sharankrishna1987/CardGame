@@ -3,8 +3,9 @@
 General info:
 1) Maven project
 2) Slf4j + log4j2 is used for logging. Logs are logged in console and in file (cardgame.log). Log file is present within the project.
-3) Mainclass to start the game: org.target.cardgame.main.CardGame
-3) User will be prompted to enter the players information and 5 rounds will be played after that by distributing one card each to every player in every round.
+3) Junits are present in test folder
+4) Mainclass to start the game: org.target.cardgame.main.CardGame
+5) User will be prompted to enter the players information and 5 rounds will be played after that by distributing one card each to every player in every round.
 
 Assumptions:
 1) 5 rounds
