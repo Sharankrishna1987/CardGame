@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="basePath">.</Property>
+    </Properties>
+ 
+    <Appenders>
+        <RollingFile name="fileLogger" fileName="${basePath}/cardgame.log" filePattern="${basePath}/cardgame-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+ 
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout   pattern="%msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.target.cardgame" level="debug" additivity="true">
+            <appender-ref ref="fileLogger" level="info" />
+        </Logger>
+        <Root level="debug" additivity="false">
+            <appender-ref ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
