@@ -49,20 +49,18 @@ public class GameImpl implements Game {
 
 		Collections.sort(players);
 
-		int winnerCount = 0;
 		int tempWinnerCount = 0;
 
 		for (Player player : players) {
 			LOGGER.info(String.format("Player %s victory count is %d \n", player.getName(), player.getVictoryCount()));
 
-			if (winnerCount == 0 || tempWinnerCount == player.getVictoryCount()) {
+			if (tempWinnerCount == 0 || tempWinnerCount == player.getVictoryCount()) {
 				winnerList.add(player);
 			} else {
 				continue;
 			}
 
-			winnerCount = player.getVictoryCount();
-			tempWinnerCount = winnerCount;
+			tempWinnerCount = player.getVictoryCount();
 		}
 
 		LOGGER.info("------------------------------------");
