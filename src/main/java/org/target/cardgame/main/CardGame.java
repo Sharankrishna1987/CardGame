@@ -19,9 +19,7 @@ public class CardGame {
 
 		try {
 
-			List<Player> players = new ArrayList<>();
-
-			initializePlayers(players);
+			List<Player> players = initializePlayers();
 
 			Game game = new GameImpl(new DeckImpl(new ArrayList<>()), players);
 
@@ -42,7 +40,9 @@ public class CardGame {
 
 	}
 
-	private static void initializePlayers(List<Player> players) {
+	private static List<Player> initializePlayers() {
+		
+		List<Player> players = new ArrayList<>();
 		int maxPlayerCount = 1;
 
 		while (true) {
@@ -63,10 +63,13 @@ public class CardGame {
 			players.add(new Player(playerName));
 			maxPlayerCount++;
 		}
+		
+		return players;
 
 	}
 
 	private static void startGame(Game game) {
+		
 		int maxRoundsCount = 1;
 
 		while (true) {
