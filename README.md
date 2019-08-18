@@ -1,7 +1,7 @@
 # CardGame
 
 General info:
-1) Maven project
+1) Maven project + JDk 1.8
 2) Slf4j + log4j2 is used for logging. Logs are logged in console and in file (cardgame.log). Log file is present within the project.
 3) Junits are present in test folder
 4) Mainclass to start the game: org.target.cardgame.main.CardGame
